@@ -8,6 +8,7 @@
 //  Copyright (c) 2019 ShopGun. All rights reserved.
 
 import Foundation
+#if os(iOS) || os(watchOS) || os(tvOS) || os(OSX)
 
 public enum MeasureTimeScale {
     case seconds
@@ -89,3 +90,4 @@ extension Future {
         return future.measure(print: label(), timeScale: timeScale, decimalPlaces: decimalPlaces)
     }
 }
+#endif

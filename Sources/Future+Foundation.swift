@@ -8,6 +8,9 @@
 //  Copyright (c) 2019 ShopGun. All rights reserved.
 
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 enum FutureFoundationError: Error {
     case unavailableBundleResource(name: String, extension: String?)
